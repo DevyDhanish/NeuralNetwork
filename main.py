@@ -9,6 +9,7 @@ YTRAIN = [ ]
 
 data_set_dir = "Data/"
 
+# random seleting data is not good for a neural network
 for i in range(DATASIZE):
     ran_ch = random.choice(["0", "1"])
     ran_img = random.choice(["1.png", "2.png", "3.png", "4.png", "5.png"]) 
