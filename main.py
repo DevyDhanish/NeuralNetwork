@@ -50,13 +50,12 @@ class NeuralNetwork:
 
     def train( self, epochs, eta):
         for epoch in range(epochs):
+            error = 0
             for itr in range(DATASIZE):
                 inputs = XTRAIN[itr]
                 desired = YTRAIN[itr]
 
                 l1_out, l2_out, l3_out = self.feedForward(inputs.flatten())
-
-                print(l3_out)
 
                 break
             break
@@ -64,5 +63,3 @@ class NeuralNetwork:
 model = NeuralNetwork(28 * 28, 1)
 
 model.train(1, 0.01)
-
-
